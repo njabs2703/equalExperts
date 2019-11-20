@@ -59,7 +59,7 @@ public class BaseDriver {
 
 	//build html report
 	public void generateReport() {
-		reporter = System.getProperty("user.dir") + "/TestResults/ilab_assesmentReport.html";
+		reporter = System.getProperty("user.dir") + "/TestResults/equal_experts_report.html";
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(reporter);
 		htmlReporter.config().setReportName("iLab Assesment eport");
 		htmlReporter.config().setDocumentTitle("Test Results");
@@ -159,6 +159,13 @@ public class BaseDriver {
 			test.pass("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath));
 		} 
 		extent.flush();
+	}
+
+	// get uiObject by classname
+	public WebElement getElementByClassName(String className){
+		WebElement elem = driver.findElement(By.className(className));
+		test.info(elem + "ui object found and actioned");
+		return elem;
 	}
 
 	// get uiObject by id

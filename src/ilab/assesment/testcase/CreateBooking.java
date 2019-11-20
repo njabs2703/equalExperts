@@ -58,7 +58,11 @@ public class CreateBooking extends BaseDriver{
 		//this.log = Logger.getLogger(ILabAssesment.class);
 		loadWebBrowser();
 		navigateToSite();
-		getElemByLinkText(DataFile.getProperty("btnCareers")).click(); //careers
+		WebElement page = getElementByClassName("jumbotron");
+		Assert.assertEquals(page.getText(), "Hotel booking form");
+		getElemById("firstname").sendKeys(randomIdentifier());
+		getElemById("lastname").sendKeys(randomIdentifier());
+/*		getElemByLinkText(DataFile.getProperty("btnCareers")).click(); //careers
 		getElemByLinkText(DataFile.getProperty("country")).click(); //south africa
 		getElemByLinkText(DataFile.getProperty("role")).click(); //post
 		scrollToView(DataFile.getProperty("applyForm"));
@@ -71,7 +75,7 @@ public class CreateBooking extends BaseDriver{
 		WebElement errorValidation = getElemByCSS(DataFile.getProperty("expectedError")); //expectedError
 		String errorMessage = errorValidation.getText();
 		Assert.assertEquals(errorMessage, "You need to upload at least one file.");
-		//log.info(this.getClass().getSimpleName()+" test completed");
+		//log.info(this.getClass().getSimpleName()+" test completed");*/
 
 	}
 
