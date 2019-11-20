@@ -1,13 +1,0 @@
-
-Nsquid:S1135U"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
-Lsquid:S2387"0"extent" is the name of a field in "BaseDriver".(®ğãùÿÿÿÿ
-ksquid:S00116"SRename this field "DataFile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¼ç¼
-˜squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(üûØí
-Csquid:S1068"'Remove this unused "log" private field.(Ä‡æ²şÿÿÿÿ
-gsquid:CommentedOutCodeLine<"<This block of commented-out lines of code should be removed.(Äò½şÿÿÿÿ
-?squid:S1148V"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-]squid:S1075)"ARefactor your code to get this URI from a customizable parameter.(÷´÷îÿÿÿÿÿ
-csquid:S00112$"FDefine and throw a dedicated exception instead of using a generic one.(ôÔ¼úùÿÿÿÿ
-Esquid:S2387"."test" is the name of a field in "BaseDriver".(§±×ñ
-[squid:UselessImportCheck"2Remove this unused import 'javax.xml.crypto.Data'.(¦¿çˆıÿÿÿÿ
-bsquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(‹ÅøÈ

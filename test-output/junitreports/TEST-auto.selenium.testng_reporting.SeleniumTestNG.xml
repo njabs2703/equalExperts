@@ -3,12 +3,12 @@
 <testsuite hostname="Njabulos-iMac.local" failures="0" tests="3" name="auto.selenium.testng_reporting.SeleniumTestNG" time="0.071" errors="1" timestamp="26 May 2019 15:52:03 GMT" skipped="2">
   <testcase classname="auto.selenium.testng_reporting.SeleniumTestNG" name="reporting" time="0.071">
     <error message="/Volumes/Local_Media/Dev/workspace/ilab_assesment\data\DataFile.properties (No such file or directory)" type="java.io.FileNotFoundException">
-      <![CDATA[java.io.FileNotFoundException: /Volumes/Local_Media/Dev/workspace/ilab_assesment\data\DataFile.properties (No such file or directory)
+        <![CDATA[java.io.FileNotFoundException: /Volumes/Local_Media/Dev/workspace/ilab_assesment\data\DataFile.properties (No such file or directory)
 at java.base/java.io.FileInputStream.open0(Native Method)
 at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
-at ilab.assesment.utility.BaseDriver.init(BaseDriver.java:53)
+at equal.experts.assesment.utility.BaseDriver.init(BaseDriver.java:53)
 at auto.selenium.testng_reporting.SeleniumTestNG.reporting(SeleniumTestNG.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

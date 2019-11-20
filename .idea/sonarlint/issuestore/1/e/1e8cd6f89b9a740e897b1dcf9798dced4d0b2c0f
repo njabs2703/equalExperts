@@ -1,0 +1,29 @@
+
+ksquid:S00116"SRename this field "DataFile" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¼ç¼
+nsquid:CommentedOutCodeLineS"<This block of commented-out lines of code should be removed.(¶š¨ôüÿÿÿÿ8“”×Ëè-
+nsquid:CommentedOutCodeLinev"<This block of commented-out lines of code should be removed.(¶š¨ôüÿÿÿÿ8Ş¶ØËè-
+\squid:S1854;">Remove this useless assignment to local variable "totalPrice".(ºØĞä8›¢ğÄè-
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(øè¡û8ÌßŞÍè-
+Osquid:S1135–"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ
+msquid:S1192>"JDefine a constant instead of duplicating this literal "jumbotron" 3 times.(ùÏµàúÿÿÿÿ8¹šˆÍè-
+Jsquid:S1068"'Remove this unused "log" private field.(Ä‡æ²şÿÿÿÿ8ÏÅıÌè-
+W
+squid:S106ˆ"9Replace this use of System.out or System.err by a logger.(£ˆ‡î8¹šˆÍè-
+gsquid:CommentedOutCodeLine9"<This block of commented-out lines of code should be removed.(Äò½şÿÿÿÿ
+\squid:S1854">Remove this useless assignment to local variable "totalPrice".(ºØĞä8¹šˆÍè-
+nsquid:CommentedOutCodeLineZ"<This block of commented-out lines of code should be removed.(Äò½şÿÿÿÿ8Ş¶ØËè-
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹ğÈşÿÿÿÿ8¨ÎßÍè-
+nsquid:CommentedOutCodeLineC"<This block of commented-out lines of code should be removed.(®¿´šùÿÿÿÿ8°—Åè-
+Msquid:S1481\"/Remove this unused "totalPrice" local variable.(ºØĞä8Ş¶ØËè-
+Msquid:S1481"/Remove this unused "totalPrice" local variable.(ºØĞä8¹šˆÍè-
+nsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(®¿´šùÿÿÿÿ8Ş¶ØËè-
+nsquid:CommentedOutCodeLine}"<This block of commented-out lines of code should be removed.(Äò½şÿÿÿÿ8¹šˆÍè-
+Gsquid:S1148—"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8…ªáÌè-
+]squid:S1075&"ARefactor your code to get this URI from a customizable parameter.(÷´÷îÿÿÿÿÿ
+\squid:S1854\">Remove this useless assignment to local variable "totalPrice".(ºØĞä8Ş¶ØËè-
+V
+squid:S106w"9Replace this use of System.out or System.err by a logger.(éƒÍ8ëøäÌè-
+[
+squid:S106T"9Replace this use of System.out or System.err by a logger.(¥ô·áûÿÿÿÿ8ÏÅıÌè-
+Msquid:S1481;"/Remove this unused "totalPrice" local variable.(ºØĞä8›¢ğÄè-

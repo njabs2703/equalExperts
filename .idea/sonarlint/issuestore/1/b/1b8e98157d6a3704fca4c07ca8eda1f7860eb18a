@@ -1,20 +1,0 @@
-
-Msquid:S26964"6Make the enclosing method "static" or remove this set.(³úí¥
-Msquid:S2696W"6Make the enclosing method "static" or remove this set.(Âéã±
-Msquid:S2696^"6Make the enclosing method "static" or remove this set.(Î°¸ó
-Msquid:S2696g"6Make the enclosing method "static" or remove this set.(Âéã±
-Rsquid:S2696X"6Make the enclosing method "static" or remove this set.(éä€úÿÿÿÿ
-hsquid:S1192T"LDefine a constant instead of duplicating this literal "testBrowser" 4 times.(ŠÜ¸ôùÿÿÿÿ
-^squid:S00112~"FDefine and throw a dedicated exception instead of using a generic one.(È°–²
-Rsquid:S2696<"6Make the enclosing method "static" or remove this set.(Õû•Ğùÿÿÿÿ
-Rsquid:S2696h"6Make the enclosing method "static" or remove this set.(éä€úÿÿÿÿ
-Msquid:S2696n"6Make the enclosing method "static" or remove this set.(Î°¸ó
-Msquid:S2696z"6Make the enclosing method "static" or remove this set.(¤¤¼Å
-Lsquid:S2696{"6Make the enclosing method "static" or remove this set.(­‹ú&
-Lsquid:S2696o"6Make the enclosing method "static" or remove this set.(«¬ç 
-Lsquid:S2696_"6Make the enclosing method "static" or remove this set.(«¬ç 
-^squid:S00112º"FDefine and throw a dedicated exception instead of using a generic one.(£§«P
-esquid:S1192-"IDefine a constant instead of duplicating this literal "user.dir" 7 times.(”—‡¶ıÿÿÿÿ
-Msquid:S26961"6Make the enclosing method "static" or remove this set.(òï„Â
-hsquid:S3008'"QRename this field "Object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì–İÌ
-|squid:S00116#"_Rename this field "BrowseralreadyLoaded" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÈÏÚûÿÿÿÿ

@@ -1,0 +1,29 @@
+
+€squid:S1192²"aDefine a constant instead of duplicating this literal " ui object ID found and actioned" 3 times.( ›Ä§8®†ÉÉè-
+fsquid:S00112‚"FDefine and throw a dedicated exception instead of using a generic one.(È°–²8í†şÂè-
+Ysquid:S2696\"6Make the enclosing method "static" or remove this set.(éä€úÿÿÿÿ8í†şÂè-
+Dsquid:S1170("!Make this final field static too.(üğçşÿÿÿÿ8°ã‹Ãè-
+W
+squid:S106ü"9Replace this use of System.out or System.err by a logger.(®Üº8Óæ²Éè-
+esquid:S00112Ü"FDefine and throw a dedicated exception instead of using a generic one.(£§«P8í†şÂè-
+ƒsquid:S00116%"_Rename this field "BrowseralreadyLoaded" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÈÏÚûÿÿÿÿ8í†şÂè-
+Tsquid:S2696k"6Make the enclosing method "static" or remove this set.(Âéã±8í†şÂè-
+Ssquid:S2696s"6Make the enclosing method "static" or remove this set.(«¬ç 8í†şÂè-
+Ssquid:S2696"6Make the enclosing method "static" or remove this set.(­‹ú&8í†şÂè-
+Tsquid:S2696r"6Make the enclosing method "static" or remove this set.(Î°¸ó8í†şÂè-
+zsquid:S1488À"\Immediately return this expression instead of assigning it to the temporary variable "page".(„¡68ÙÎÓËè-
+Tsquid:S26968"6Make the enclosing method "static" or remove this set.(³úí¥8í†şÂè-
+osquid:S1192X"LDefine a constant instead of duplicating this literal "testBrowser" 4 times.(ŠÜ¸ôùÿÿÿÿ8í†şÂè-
+osquid:S3008+"QRename this field "Object" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì–İÌ8í†şÂè-
+Tsquid:S2696b"6Make the enclosing method "static" or remove this set.(Î°¸ó8í†şÂè-
+Ssquid:S2696c"6Make the enclosing method "static" or remove this set.(«¬ç 8í†şÂè-
+Tsquid:S2696["6Make the enclosing method "static" or remove this set.(Âéã±8í†şÂè-
+lsquid:S11921"IDefine a constant instead of duplicating this literal "user.dir" 7 times.(”—‡¶ıÿÿÿÿ8í†şÂè-
+Ysquid:S26965"6Make the enclosing method "static" or remove this set.(şõşÛûÿÿÿÿ8í†şÂè-
+Ssquid:S2696@"6Make the enclosing method "static" or remove this set.(Öäè[8í†şÂè-
+Tsquid:S2696~"6Make the enclosing method "static" or remove this set.(¤¤¼Å8í†şÂè-
+wsquid:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(åæÓ8°ã‹Ãè-
+Ysquid:S2696l"6Make the enclosing method "static" or remove this set.(éä€úÿÿÿÿ8í†şÂè-
+osquid:CommentedOutCodeLineº"<This block of commented-out lines of code should be removed.(ÌÇùéşÿÿÿÿ8ãåŞÊè-
+\
+squid:S106ø"9Replace this use of System.out or System.err by a logger.(˜Ó­¾øÿÿÿÿ8Óæ²Éè-
