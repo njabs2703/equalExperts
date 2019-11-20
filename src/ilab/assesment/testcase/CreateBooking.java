@@ -1,12 +1,20 @@
 package ilab.assesment.testcase;
 
 import java.io.FileInputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 import javax.xml.crypto.Data;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -21,9 +29,7 @@ import ilab.assesment.utility.PhoneNumber;
 
 public class CreateBooking extends BaseDriver{
 
-	ExtentReports extent;
-	ExtentTest test;
-	String reporter;
+	Random rand;
 	Properties DataFile;
 	private Logger log;
 
@@ -54,28 +60,34 @@ public class CreateBooking extends BaseDriver{
 	
 	//test case steps below
 	@Test(priority = 1)
-	public void succesfulLogin() throws Throwable {
+	public void bookingWithDep() throws Throwable {
 		//this.log = Logger.getLogger(ILabAssesment.class);
+		rand  = new Random();
+		int totalPrice = rand.nextInt(1000);
 		loadWebBrowser();
 		navigateToSite();
 		WebElement page = getElementByClassName("jumbotron");
 		Assert.assertEquals(page.getText(), "Hotel booking form");
 		getElemById("firstname").sendKeys(randomIdentifier());
 		getElemById("lastname").sendKeys(randomIdentifier());
-/*		getElemByLinkText(DataFile.getProperty("btnCareers")).click(); //careers
-		getElemByLinkText(DataFile.getProperty("country")).click(); //south africa
-		getElemByLinkText(DataFile.getProperty("role")).click(); //post
-		scrollToView(DataFile.getProperty("applyForm"));
-		getElemByCSS(DataFile.getProperty("applyOnline")).click(); //applyonline
-		getElemById("applicant_name").sendKeys(DataFile.getProperty("name"));
-		getElemById("email").sendKeys(DataFile.getProperty("email"));
-		getElemById("phone").sendKeys(new PhoneNumber().mobileNumber());
-		scrollToView("wpjb_submit");
-		getElemById("wpjb_submit").click(); //submit
-		WebElement errorValidation = getElemByCSS(DataFile.getProperty("expectedError")); //expectedError
-		String errorMessage = errorValidation.getText();
-		Assert.assertEquals(errorMessage, "You need to upload at least one file.");
-		//log.info(this.getClass().getSimpleName()+" test completed");*/
+		getElemById("totalprice").sendKeys(String.valueOf(rand.nextInt(1000)));
+		//WebElement deposit = getElemsById("");
+		Select deposit = new Select(getElemById("depositpaid"));
+		deposit.selectByIndex(0);
+
+		WebElement checkIn = getElemById("checkin");
+		WebElement checkOut = getElemById("checkout");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = new Date();
+		String today = dateFormat.format(date);
+		checkIn.click();
+		checkIn.sendKeys(today);
+		checkIn.sendKeys(Keys.TAB);
+		checkOut.sendKeys(today);
+
+		getElemByXpath("//*[@id=\"form\"]/div/div[7]/input").click();
+
+		System.out.println("done booking");
 
 	}
 

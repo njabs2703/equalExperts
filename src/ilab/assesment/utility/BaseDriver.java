@@ -19,6 +19,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -176,6 +179,25 @@ public class BaseDriver {
 		return elem;
 	}
 
+	// get uiObject by id
+	public WebElement getElemByXpath(String xpath) {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement elem = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+		//WebElement elem = driver.findElement(By.xpath(xpath));
+		test.info(elem + " ui object ID found and actioned").toString();
+		return elem;
+	}
+
+
+
+	// get uiObject by id
+	public WebElement getElemsById(String id) {
+
+		WebElement elem = (WebElement) driver.findElements(By.id(id));
+		test.info(elem + " ui object ID found and actioned").toString();
+		return elem;
+	}
+
 	// get uiObject by linkText
 	public WebElement getElemByLinkText(String linkText) {
 
@@ -212,6 +234,21 @@ public class BaseDriver {
 			}
 		}
 		return builder.toString();
+	}
+
+	public String getCurrentDay (){
+		//Create a Calendar Object
+		Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+
+		//Get Current Day as a number
+		int todayInt = calendar.get(Calendar.DAY_OF_MONTH);
+		System.out.println("Today Int: " + todayInt +"\n");
+
+		//Integer to String Conversion
+		String todayStr = Integer.toString(todayInt);
+		System.out.println("Today Str: " + todayStr + "\n");
+
+		return todayStr;
 	}
 
 }
