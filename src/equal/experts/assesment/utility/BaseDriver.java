@@ -1,4 +1,4 @@
-package ilab.assesment.utility;
+package equal.experts.assesment.utility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-import ilab.assesment.testcase.CreateBooking;
+import equal.experts.assesment.testcase.CreateBooking;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -19,7 +19,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -64,7 +63,7 @@ public class BaseDriver {
 	public void generateReport() {
 		reporter = System.getProperty("user.dir") + "/TestResults/equal_experts_report.html";
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(reporter);
-		htmlReporter.config().setReportName("iLab Assesment eport");
+		htmlReporter.config().setReportName("Equal Experts report");
 		htmlReporter.config().setDocumentTitle("Test Results");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
@@ -72,7 +71,7 @@ public class BaseDriver {
 		test = extent.createTest(" Test Case", "See the steps below for this test");
 		test.info("This step shows usage of info(details)");
 		test.assignAuthor("Njabulo Mlahleki");
-		test.assignCategory("Apply Online");
+		test.assignCategory("Book Online");
 	}
 
 	public void navigateToSite() {
@@ -155,26 +154,27 @@ public class BaseDriver {
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:",
 					ExtentColor.RED));
 			test.fail(result.getThrowable().getMessage());
-			test.fail("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath));
+			test.fail("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath).toString());
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			String screenShotPath = getScreenshot(driver, "ScreenshotPass");
 			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " Test Case PASSED", ExtentColor.GREEN));
-			test.pass("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath));
-		} 
+			test.pass("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath).toString());
+		}
 		extent.flush();
 	}
 
 	// get uiObject by classname
 	public WebElement getElementByClassName(String className){
-		WebElement elem = driver.findElement(By.className(className));
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement elem = wait.until(ExpectedConditions.elementToBeClickable(By.className(className)));
 		test.info(elem + "ui object found and actioned");
 		return elem;
 	}
 
 	// get uiObject by id
 	public WebElement getElemById(String id) {
-
-		WebElement elem = driver.findElement(By.id(id));
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement elem = wait.until(ExpectedConditions.elementToBeClickable(By.id(id)));
 		test.info(elem + " ui object ID found and actioned").toString();
 		return elem;
 	}
@@ -184,11 +184,14 @@ public class BaseDriver {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebElement elem = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		//WebElement elem = driver.findElement(By.xpath(xpath));
-		test.info(elem + " ui object ID found and actioned").toString();
+		test.pass(elem + " ui object ID found and actioned").toString();
 		return elem;
 	}
 
-
+	public String getPageTitle(){
+		String page  = driver.getTitle();
+		return page;
+	}
 
 	// get uiObject by id
 	public WebElement getElemsById(String id) {
