@@ -6,7 +6,7 @@
     <groups>
     </groups>
     <test started-at="2019-05-27T09:27:33Z" name="Default test" finished-at="2019-05-27T09:28:36Z" duration-ms="62466">
-      <class name="ilab.assesment.testcase.ILabAssesment">
+      <class name="ilab.assesment.testcase.CreateBooking">
         <test-method is-config="true" signature="reporting()[pri:0, instance:ilab.assesment.testcase.ILabAssesment@568ff82]" started-at="2019-05-27T09:27:33Z" name="reporting" finished-at="2019-05-27T09:27:34Z" duration-ms="400" status="PASS">
           <reporter-output>
           </reporter-output>

@@ -4,10 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
+import ilab.assesment.testcase.CreateBooking;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -28,14 +28,16 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import ilab.assesment.testcase.ILabAssesment;
+
 
 public class BaseDriver {
 
 	boolean BrowseralreadyLoaded = false;
 	ExtentReports extent;
 	ExtentTest test;
-	
+	final String lexicon = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12345674890";
+	final Random rand = new Random();
+	final Set<String> identifiers = new HashSet<String>();
 	static Properties Object = null;
 	static WebDriver driver;
 	static WebDriver chromeBrowser;
@@ -46,7 +48,7 @@ public class BaseDriver {
 
 	public void initializeObjects() throws IOException {
 		//initialize logger service.
-		log = Logger.getLogger(ILabAssesment.class);
+		log = Logger.getLogger(CreateBooking.class);
 		BasicConfigurator.configure();
 		//initialize Objects.properties file.
 		Object = new Properties();
@@ -187,6 +189,22 @@ public class BaseDriver {
 		WebElement element = driver.findElement(By.id(id));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 		Thread.sleep(500);
+	}
+
+	// class variable
+
+	public String randomIdentifier() {
+		StringBuilder builder = new StringBuilder();
+		while(builder.toString().length() == 0) {
+			int length = rand.nextInt(5)+5;
+			for(int i = 0; i < length; i++) {
+				builder.append(lexicon.charAt(rand.nextInt(lexicon.length())));
+			}
+			if(identifiers.contains(builder.toString())) {
+				builder = new StringBuilder();
+			}
+		}
+		return builder.toString();
 	}
 
 }

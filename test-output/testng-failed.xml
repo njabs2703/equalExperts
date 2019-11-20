@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ilab.assesment.testcase.ILabAssesment">
+      <class name="ilab.assesment.testcase.CreateBooking">
         <methods>
           <include name="getTestResults"/>
           <include name="succesfulLogin"/>

@@ -19,7 +19,7 @@ import com.aventstack.extentreports.ExtentTest;
 import ilab.assesment.utility.BaseDriver;
 import ilab.assesment.utility.PhoneNumber;
 
-public class ILabAssesment extends BaseDriver{
+public class CreateBooking extends BaseDriver{
 
 	ExtentReports extent;
 	ExtentTest test;
@@ -28,9 +28,7 @@ public class ILabAssesment extends BaseDriver{
 	private Logger log;
 
 	
-	public ILabAssesment() {
 
-	}
 
 	@BeforeTest
 	public void reporting() throws Throwable {
